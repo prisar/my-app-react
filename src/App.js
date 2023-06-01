@@ -1,23 +1,28 @@
 import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
+import {
+  useReactTable,
+  getCoreRowModel,
+  getPaginationRowModel,
+  getSortedRowModel
+} from '@tanstack/react-table';
+
+async function logJSONData() {
+  const response = await fetch("https://s3-ap-southeast-1.amazonaws.com/he-public-data/reciped9d7b8c.json");
+  const jsonData = await response.json();
+  console.log(jsonData);
+}
 
 function App() {
+  
+
+  useEffect(() => {
+    logJSONData();
+  });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Hi
     </div>
   );
 }
