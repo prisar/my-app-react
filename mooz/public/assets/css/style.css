@@ -18,7 +18,9 @@ body {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -430,4 +432,111 @@ a {
 .location-calendar-line {
   background: #979797;
   margin: 10px 0;
+}
+
+@media screen and (min-width: 900px) {
+  .web-banner-image {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .web-banner-image {
+    position: relative;
+    width: -webkit-fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    min-height: 250px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .web-banner-image-img {
+    max-height: 650px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .web-banner-image-img {
+    max-height: 600px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .web-banner-image-img {
+    width: 100%;
+    max-height: 500px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .web-banner-image-block {
+    max-width: 70%;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .web-banner-image-block-background {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .web-banner-image-block {
+    position: absolute;
+    top: 30px;
+    margin: auto;
+    height: -webkit-max-content;
+    height: max-content;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .web-banner-image-block-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .web-banner-image-block-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .web-banner-image-block-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .web-banner-image-block-sub-title {
+      margin-top: 16px;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.29;
+      letter-spacing: normal;
+      color: #fff;
+  }
 }
