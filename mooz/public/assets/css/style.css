@@ -38,12 +38,6 @@ header .desktop_header {
   display: none;
 }
 
-@media (min-width: 900px) {
-  header .desktop_header {
-    display: flex;
-  }
-}
-
 header #logo {
   margin: 0 0 0 16px;
   flex: 1;
@@ -252,13 +246,6 @@ header #logo a {
 
 
 /* header right */
-@media (min-width: 900px) {
-  header nav {
-    -webkit-transform: translateX(-20px);
-    transform: translateX(-20px);
-    display: unset;
-  }
-}
 
 header nav ul {
   margin: 0;
@@ -314,98 +301,6 @@ a {
 
 /* booking section below header */
 
-@media screen and (min-width: 320px) {
-  .web-banner-vertical {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 60px;
-    height: 440px;
-    background-size: cover;
-    padding-top: 50px;
-    box-sizing: border-box;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .web-banner-vertical {
-    padding: 40px 20px 0px 20px;
-    height: 380px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 50px;
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .web-banner {
-    font-family: "IBM Plex Sans";
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
-    height: 300px;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .web-banner-block-background {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 20px;
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .web-banner-block {
-    height: -webkit-max-content;
-    height: max-content;
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .web-banner-block {
-    padding: 20px;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .web-banner-block {
-    max-width: 70%;
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .web-banner-block-title {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.29;
-    letter-spacing: normal;
-    color: #fff;
-    text-align: center;
-    margin: 0px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .web-banner-block-title {
-    font-size: 42px;
-    font-weight: 600;
-    line-height: 1.29;
-    letter-spacing: normal;
-    color: #fff;
-  }
-}
-
 .location-calendar {
   position: relative;
   width: 60%;
@@ -422,6 +317,13 @@ a {
   border-bottom-left-radius: 30px;
 }
 
+.location-calendar-tab:nth-child(4) {
+  background: #10a310;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: white;
+}
+
 .location-calendar-tab {
   display: flex;
   justify-content: center;
@@ -432,113 +334,6 @@ a {
 .location-calendar-line {
   background: #979797;
   margin: 10px 0;
-}
-
-@media screen and (min-width: 320px) {
-  .web-banner-image {
-    position: relative;
-    width: -webkit-fit-content;
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    min-height: 250px;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .web-banner-image {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .web-banner-image-img {
-    max-height: 650px;
-  }
-}
-
-@media screen and (min-width: 500px) {
-  .web-banner-image-img {
-    max-height: 600px;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .web-banner-image-img {
-    width: 100%;
-    max-height: 500px;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .web-banner-image-block {
-    max-width: 70%;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .web-banner-image-block-background {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 20px;
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .web-banner-image-block {
-    position: absolute;
-    top: 30px;
-    margin: auto;
-    height: -webkit-max-content;
-    height: max-content;
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .web-banner-image-block-title {
-    font-size: 36px;
-    font-weight: 600;
-    line-height: 1.29;
-    letter-spacing: normal;
-    color: #fff;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .web-banner-image-block-title {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.29;
-    letter-spacing: normal;
-    color: #fff;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .web-banner-image-block-title {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.29;
-    letter-spacing: normal;
-    color: #fff;
-    text-align: center;
-    margin: 0px;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .web-banner-image-block-sub-title {
-    margin-top: 16px;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1.29;
-    letter-spacing: normal;
-    color: #fff;
-  }
 }
 
 /* carousel section */
@@ -709,19 +504,6 @@ a {
 }
 
 /* testimonials section */
-@media screen and (min-width: 992px) {
-  .host-testimonials-title {
-    font-size: 30px;
-    margin: 30px;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .host-testimonials-title {
-    font-size: 14px;
-    margin: 20px;
-  }
-}
 
 .host-testimonials-title {
   text-align: center;
@@ -735,77 +517,12 @@ a {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 1400px) {
-  .host-testimonials {
-    max-width: 1296px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .host-testimonials {
-    max-width: 1140px;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .host-testimonials {
-    max-width: 860px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .host-testimonials {
-    max-width: 720px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .host-testimonials {
-    max-width: 960px;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .host-testimonials {
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-}
-
 .host-testimonials {
   position: relative;
   display: flex;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-}
-
-@media screen and (min-width: 992px) {
-  .host-testimonials-left-arrow-container {
-    left: 0;
-  }
-}
-
-@media screen and (min-width: 992px) {
-
-  .host-testimonials-left-arrow-container,
-  .host-testimonials-right-arrow-container {
-    display: block;
-    position: absolute;
-    cursor: pointer;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .host-testimonials-container {
-    overflow: hidden;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .host-testimonials-container {
-    overflow: scroll;
-  }
 }
 
 .host-testimonials-container {
@@ -817,18 +534,6 @@ a {
   justify-content: space-between;
 }
 
-@media screen and (min-width: 992px) {
-  .host-testimonials-container-blocks-block {
-    min-width: 32%;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .host-testimonials-container-blocks-block {
-    min-width: 180px;
-  }
-}
-
 .host-testimonials-container-blocks-block {
   display: flex;
   flex-direction: column;
@@ -837,22 +542,6 @@ a {
   margin: 0.7%;
   box-sizing: border-box;
   background: #ebf8eb;
-}
-
-@media screen and (min-width: 992px) {
-  .host-testimonials-container-blocks-block-thumbnail {
-    height: 250px;
-    width: 250px;
-    bottom: -40px;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .host-testimonials-container-blocks-block-thumbnail {
-    height: 125px;
-    width: 125px;
-    bottom: -25px;
-  }
 }
 
 .host-testimonials-container-blocks-block-thumbnail {
@@ -866,20 +555,6 @@ a {
   border: 1px solid #d1ecd1;
 }
 
-@media screen and (min-width: 992px) {
-  .host-testimonials-container-blocks-block-description {
-    padding: 30px 0px 24px 0px;
-    min-height: 180px;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .host-testimonials-container-blocks-block-description {
-    min-height: 150px;
-    padding: 15px 0px 5px 0px;
-  }
-}
-
 .host-testimonials-container-blocks-block-description {
   background-color: #f3f8f3;
   display: flex;
@@ -891,12 +566,6 @@ a {
   width: 100%;
   border-radius: 8px;
   box-sizing: border-box;
-}
-
-@media screen and (min-width: 320px) {
-  .host-testimonials-container-blocks-block-description-name {
-    font-size: 11px;
-  }
 }
 
 .host-testimonials-container-blocks-block-description-name {
@@ -916,20 +585,6 @@ a {
   color: #1f1f1f;
 }
 
-@media screen and (min-width: 992px) {
-  .host-testimonials-container-blocks-block-description-text {
-    font-size: 18px;
-    width: 80%;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .host-testimonials-container-blocks-block-description-text {
-    font-size: 11px;
-    width: 90%;
-  }
-}
-
 .host-testimonials-container-blocks-block-description-text {
   width: 75%;
   font-size: 18px;
@@ -942,246 +597,9 @@ a {
 }
 
 /* footer */
-@media screen and (min-width: 320px) {
-  .footer-new {
-    color: #fff;
-    font-family: "IBM Plex Sans";
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-info {
-    padding: 34px 84px;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-info {
-    padding: 16px;
-    background-color: #383838;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-info-sections {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-info-sections-section {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: normal;
-    color: #fff;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-info-sections-section-selected {
-    border-bottom: 2px solid #c5c1c1;
-    padding-bottom: 10px;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-info-sections-section {
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: normal;
-    color: #fff;
-    cursor: pointer;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-info-sections-section-title {
-    margin: 0;
-  }
-
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-location {
-    padding: 42px 84px;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location {
-    padding: 16px;
-    background: #666;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-location-operate-text {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: normal;
-    color: #fff;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location-operate-text {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: normal;
-    color: #fff;
-    margin: 0;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location-countries {
-    padding: 40px 0;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-location-countries-india-title {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: normal;
-    color: #fff;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location-countries-india-title {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: normal;
-    color: #fff;
-    text-transform: uppercase;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-location-countries-india-cities {
-    grid-template-columns: repeat(4, 25%);
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location-countries-india-cities {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location-countries-india-cities-city {
-    margin-top: 24px;
-    text-transform: capitalize;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location-countries-india-cities-city-link {
-    color: white;
-    text-decoration: none;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-location-countries-other {
-    grid-template-columns: repeat(4, 25%);
-    gap: 0px;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location-countries-other {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    gap: 16px;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-location-countries-other {
-    grid-template-columns: repeat(4, 25%);
-    gap: 0px;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location-countries-other {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    gap: 16px;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location-countries-other-block-city {
-    margin-top: 20px;
-    text-transform: capitalize;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location-countries-india-cities-city-link {
-    color: white;
-    text-decoration: none;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-location-social-title {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: normal;
-    color: #fff;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location-social-title {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: normal;
-    color: #fff;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-location-social-icons {
-    gap: 34px;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location-social-icons {
-    margin-top: 16px;
-    display: flex;
-    gap: 22px;
-  }
-}
 
 .social-icons.twitter {
   background-position: 294px -103px;
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-location-social-icons>i {
-    cursor: pointer;
-  }
 }
 
 .social-icons {
@@ -1208,202 +626,6 @@ a {
   background-position: 95px -103px;
 }
 
-@media screen and (min-width: 900px) {
-  .footer-new-mobile-qr {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-mobile-qr {
-    padding: 16px;
-    background: #666;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-mobile-qr-title {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: normal;
-    color: #fff;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-mobile-qr-sub-title {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: normal;
-    color: #fff;
-    margin-top: 16px;
-  }
-
-}
-
-@media screen and (min-width: 1200px) {
-  .footer-new-logo-qr-logo-text {
-    font-size: 70px;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: normal;
-    color: #e0e0e0;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-logo-qr-logo-text {
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: normal;
-    color: #e0e0e0;
-    opacity: 0.5;
-    margin: 0;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-logo-qr-qr {
-    display: flex;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-logo-qr-qr {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-logo-qr-qr-block {
-    grid-template-rows: 5fr 1fr;
-    height: 100%;
-  }
-
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-logo-qr-qr-block-image>img {
-    height: 100%;
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-logo-qr-qr-block-image>img {
-    height: 112px;
-    width: 112px;
-  }
-
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-logo-qr-qr-block-text {
-    text-align: center;
-    display: block;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-logo-qr-qr-block-text {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-logo-qr-qr-desc {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-logo-qr-qr-desc {
-    padding-left: 20px;
-  }
-
-}
-
-@media screen and (min-width: 1200px) {
-  .footer-new-logo-qr-qr-desc-title {
-    font-size: 36px;
-    font-weight: 600;
-    line-height: 1.33;
-    letter-spacing: normal;
-    color: #fff;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-logo-qr-qr-desc-title {
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 1.33;
-    letter-spacing: normal;
-    color: #fff;
-    display: block;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-logo-qr-qr-desc-title {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.33;
-    letter-spacing: normal;
-    color: #fff;
-    display: none;
-  }
-
-}
-
-@media screen and (min-width: 1200px) {
-  .footer-new-logo-qr-qr-desc-description {
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 1.29;
-    letter-spacing: normal;
-    color: #fff;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-logo-qr-qr-desc-description {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.29;
-    letter-spacing: normal;
-    color: #fff;
-    display: block;
-  }
-
-}
-
-@media screen and (min-width: 900px) {
-  .footer-new-logo-qr-qr-desc-buttons {
-    flex-direction: row;
-    gap: 20px;
-    justify-content: flex-start;
-    height: auto;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .footer-new-logo-qr-qr-desc-buttons {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-}
-
 .playstore-icons.google-play {
   background-position: 206px 93px;
 }
@@ -1420,29 +642,651 @@ a {
   background-position: 342px 93px;
 }
 
-@media screen and (min-width: 900px) {
-  .footer-new-copyright {
-    padding: 24px 84px;
-  }
-}
 
 @media screen and (min-width: 320px) {
+  .web-banner-vertical {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+    height: 440px;
+    background-size: cover;
+    padding-top: 50px;
+    box-sizing: border-box;
+  }
+
+  .web-banner {
+    font-family: "IBM Plex Sans";
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    height: 300px;
+  }
+
+  .web-banner-block-background {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    background-size: cover;
+  }
+
+  .web-banner-block {
+    height: -webkit-max-content;
+    height: max-content;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  .web-banner-block-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+  }
+
+  .web-banner-block-sub-title {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+    margin-top: 8px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .web-banner-image {
+    position: relative;
+    width: -webkit-fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    min-height: 250px;
+  }
+
+  .web-banner-image-img {
+    width: 100%;
+    max-height: 500px;
+  }
+
+  .web-banner-image-block-background {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    background-size: cover;
+  }
+
+  .web-banner-image-block {
+    position: absolute;
+    top: 30px;
+    margin: auto;
+    height: -webkit-max-content;
+    height: max-content;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .web-banner-image-block-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+  }
+
+  .host-testimonials-title {
+    font-size: 14px;
+    margin: 20px;
+  }
+
+  .host-testimonials {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .host-testimonials-container {
+    overflow: scroll;
+  }
+
+  .host-testimonials-container-blocks-block {
+    min-width: 180px;
+  }
+
+  .host-testimonials-container-blocks-block-thumbnail {
+    height: 125px;
+    width: 125px;
+    bottom: -25px;
+  }
+
+  .host-testimonials-container-blocks-block-description {
+    min-height: 150px;
+    padding: 15px 0px 5px 0px;
+  }
+
+  .host-testimonials-container-blocks-block-description-name {
+    font-size: 11px;
+  }
+
+  .host-testimonials-container-blocks-block-description-text {
+    font-size: 11px;
+    width: 90%;
+  }
+
+  .footer-new {
+    color: #fff;
+    font-family: "IBM Plex Sans";
+  }
+
+  .footer-new-info {
+    padding: 16px;
+    background-color: #383838;
+  }
+
+  .footer-new-info-sections {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-new-info-sections-section-selected {
+    border-bottom: 2px solid #c5c1c1;
+    padding-bottom: 10px;
+  }
+
+  .footer-new-info-sections-section {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .footer-new-info-sections-section-title {
+    margin: 0;
+  }
+
+  .footer-new-location {
+    padding: 16px;
+    background: #666;
+  }
+
+  .footer-new-location-operate-text {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #fff;
+    margin: 0;
+  }
+
+  .footer-new-location-countries {
+    padding: 40px 0;
+  }
+
+  .footer-new-location-countries-india-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .footer-new-location-countries-india-cities {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .footer-new-location-countries-india-cities-city {
+    margin-top: 24px;
+    text-transform: capitalize;
+  }
+
+  .footer-new-location-countries-india-cities-city-link {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-new-location-countries-other {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 16px;
+  }
+
+  .footer-new-location-countries-other {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 16px;
+  }
+
+  .footer-new-location-countries-other-block-city {
+    margin-top: 20px;
+    text-transform: capitalize;
+  }
+
+  .footer-new-location-countries-india-cities-city-link {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-new-location-social-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+  .footer-new-location-social-icons {
+    margin-top: 16px;
+    display: flex;
+    gap: 22px;
+  }
+
+  .footer-new-location-social-icons>i {
+    cursor: pointer;
+  }
+
+  .footer-new-mobile-qr {
+    padding: 16px;
+    background: #666;
+  }
+
+  .footer-new-mobile-qr-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+  .footer-new-mobile-qr-sub-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #fff;
+    margin-top: 16px;
+  }
+
+  .footer-new-logo-qr-logo-text {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #e0e0e0;
+    opacity: 0.5;
+    margin: 0;
+  }
+
+  .footer-new-logo-qr-qr {
+    display: flex;
+  }
+
+  .footer-new-logo-qr-qr-block-image>img {
+    height: 112px;
+    width: 112px;
+  }
+
+  .footer-new-logo-qr-qr-block-text {
+    display: none;
+  }
+
+  .footer-new-logo-qr-qr-desc {
+    padding-left: 20px;
+  }
+
+  .footer-new-logo-qr-qr-desc-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #fff;
+    display: none;
+  }
+
+  .footer-new-logo-qr-qr-desc-buttons {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
   .footer-new-copyright {
     padding: 16px;
     background-color: #666;
   }
 
-}
-
-@media screen and (min-width: 320px) {
   .footer-new-copyright-line {
     border: 1px solid #e0e0e0;
   }
-}
 
-@media screen and (min-width: 320px) {
   .footer-new-copyright-content {
     margin-top: 20px;
     color: #a8a8a8;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .web-banner-image-img {
+    max-height: 600px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .web-banner-block {
+    padding: 20px;
+  }
+
+  .web-banner-image-block-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+  .web-banner-block-sub-title {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+  .host-testimonials {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 900px) {
+  header .desktop_header {
+    display: flex;
+  }
+
+  header nav {
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+    display: unset;
+  }
+
+  .web-banner-vertical {
+    padding: 40px 20px 0px 20px;
+    height: 380px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    background-size: cover;
+  }
+
+  .web-banner-block {
+    max-width: 70%;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+
+  .web-banner-image {
+    width: 100%;
+  }
+
+  .web-banner-image-img {
+    max-height: 650px;
+  }
+
+  .web-banner-image-block {
+    max-width: 70%;
+  }
+
+  .web-banner-image-block-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+  .web-banner-image-block-sub-title {
+    margin-top: 16px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+  .host-testimonials-title {
+    font-size: 30px;
+    margin: 30px;
+  }
+
+  .host-testimonials {
+    max-width: 860px;
+  }
+
+  .footer-new-info {
+    padding: 34px 84px;
+  }
+
+  .footer-new-info-sections-section {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+  .footer-new-location {
+    padding: 42px 84px;
+  }
+
+  .footer-new-location-operate-text {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+  .footer-new-location-countries-india-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+  .footer-new-location-countries-india-cities {
+    grid-template-columns: repeat(4, 25%);
+  }
+
+  .footer-new-location-countries-other {
+    grid-template-columns: repeat(4, 25%);
+    gap: 0px;
+  }
+
+  .footer-new-location-countries-other {
+    grid-template-columns: repeat(4, 25%);
+    gap: 0px;
+  }
+
+  .footer-new-location-social-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+  .footer-new-location-social-icons {
+    gap: 34px;
+  }
+
+  .footer-new-mobile-qr {
+    display: none;
+  }
+
+  .footer-new-logo-qr-qr {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .footer-new-logo-qr-qr-block {
+    grid-template-rows: 5fr 1fr;
+    height: 100%;
+  }
+
+  .footer-new-logo-qr-qr-block-image>img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .footer-new-logo-qr-qr-block-text {
+    text-align: center;
+    display: block;
+  }
+
+  .footer-new-logo-qr-qr-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .footer-new-logo-qr-qr-desc-title {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #fff;
+    display: block;
+  }
+
+  .footer-new-logo-qr-qr-desc-description {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+    display: block;
+  }
+
+  .footer-new-logo-qr-qr-desc-buttons {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .footer-new-copyright {
+    padding: 24px 84px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .host-testimonials {
+    max-width: 960px;
+  }
+
+  .host-testimonials-container-blocks-block {
+    min-width: 32%;
+  }
+
+  .host-testimonials-container-blocks-block-thumbnail {
+    height: 250px;
+    width: 250px;
+    bottom: -40px;
+  }
+
+  .host-testimonials-container-blocks-block-description {
+    padding: 30px 0px 24px 0px;
+    min-height: 180px;
+  }
+
+  .host-testimonials-container-blocks-block-description-text {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  .host-testimonials-left-arrow-container {
+    left: 0;
+  }
+
+  .host-testimonials-left-arrow-container,
+  .host-testimonials-right-arrow-container {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .host-testimonials-container {
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .web-banner-block-title {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+  .web-banner-block-sub-title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+  .host-testimonials {
+    max-width: 1140px;
+  }
+
+  .footer-new-logo-qr-logo-text {
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #e0e0e0;
+  }
+
+  .footer-new-logo-qr-qr-desc-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+  .footer-new-logo-qr-qr-desc-description {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
+  .host-testimonials {
+    max-width: 1296px;
   }
 }
