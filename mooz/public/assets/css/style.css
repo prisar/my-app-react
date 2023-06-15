@@ -109,14 +109,14 @@ header #logo {
 }
 
 .material-design-hamburger__icon {
-  padding: 3rem 1rem;
+  padding: 0rem 1rem;
   cursor: pointer;
 }
 
 .material-design-hamburger__layer {
   display: block;
-  width: 100px;
-  height: 10px;
+  width: 30px;
+  height: 3px;
   background: #eee;
   position: relative;
   animation-duration: 300ms;
@@ -126,7 +126,7 @@ header #logo {
 .material-design-hamburger__layer:before, .material-design-hamburger__layer:after {
   display: block;
   width: inherit;
-  height: 10px;
+  height: 3px;
   position: absolute;
   background: inherit;
   left: 0;
