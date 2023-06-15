@@ -1,4 +1,4 @@
-### setup
+### install
 
     npm install
 
@@ -6,4 +6,4 @@
 
     npm start
 
-### 
+###
