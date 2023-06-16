@@ -1,0 +1,9 @@
+.pdf-view {
+    height: 720px;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  
