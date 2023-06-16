@@ -85,7 +85,7 @@ header #logo a {
 
 .menu a {
   text-decoration: none;
-  /* color: #3367d6; */
+  color: #333;
 }
 
 .menu a:hover {
@@ -264,11 +264,16 @@ header nav li {
   align-items: center;
 }
 
-header a {
-  color: #333;
+header nav a {
+  color: white;
 }
 
-header a:visited {
+header menu a:visited {
+  color: #333;
+  text-decoration: none;
+}
+
+header menu a:active {
   color: #333;
 }
 
@@ -620,6 +625,198 @@ a {
   pointer-events: none;
   opacity: 0.5
 }
+
+.calendar-v2-month {
+  width: 90%;
+  margin: auto;
+  font-family: "IBM Plex Sans";
+  padding: 20px
+}
+
+.calendar-v2-month-day-initials {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px
+}
+
+.calendar-v2-month-day-initials-text {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 2px;
+  color: #666;
+  text-align: center
+}
+
+.calendar-v2-month-title {
+  margin: 30px 0px 24px 0px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: .24px;
+  color: #1f1f1f
+}
+
+.calendar-v2-month-dates-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr)
+}
+
+.calendar-v2-month-dates-week-day {
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 4px;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.calendar-v2-month-dates-week-day-range {
+  background: #f5f5f5
+}
+
+.calendar-v2-month-dates-week-day-selected {
+  background: #10a310;
+  color: #fff;
+  border-radius: 4px
+}
+
+.calendar-v2-month-dates-week-day-selected-line-left {
+  position: absolute;
+  font-size: 10px;
+  margin-right: 10px;
+  left: 5px
+}
+
+.calendar-v2-month-dates-week-day-selected-line-right {
+  position: absolute;
+  font-size: 10px;
+  margin-left: 10px;
+  right: 5px
+}
+
+.calendar-v2-month-dates-week-day-before-today {
+  pointer-events: none;
+  color: lightgray
+}
+
+.calendar-v2-month-dates-week-day-unavailable {
+  text-decoration: line-through;
+  color: gray;
+  pointer-events: none
+}
+.component-time-slider.time-wrap .range-wrap {
+  position: relative;
+  padding: 0 16px;
+  height: 60px;
+  overflow: hidden;
+  display: flex;
+  align-items: center
+}
+
+.component-time-slider.time-wrap .date-n-switch {
+  padding: 14px
+}
+
+.component-time-slider.time-wrap .date-n-switch .date {
+  font-size: 12px
+}
+
+.component-time-slider.time-wrap .time-range {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0 30px
+}
+
+.component-time-slider.time-wrap .time-range input {
+  width: 100%;
+  height: 60px;
+  opacity: 0;
+  display: block;
+  margin: 0
+}
+
+.component-time-slider.time-wrap .time-range input::-webkit-slider-thumb {
+  background: transparent;
+  height: 90px;
+  width: 90px;
+  border-radius: 0
+}
+
+.component-time-slider.time-wrap .time-range:focus {
+  outline: none
+}
+
+.component-time-slider.time-wrap .line {
+  width: 100%;
+  border-radius: 4px;
+  height: 4px
+}
+
+.component-time-slider.time-wrap .steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative
+}
+
+.component-time-slider.time-wrap .steps>span {
+  display: block;
+  width: 1px;
+  height: 12px;
+  background: gray
+}
+
+.component-time-slider.time-wrap .steps>span:nth-child(even) {
+  height: 6px
+}
+
+.component-time-slider.time-wrap .steps>span .txt {
+  position: absolute;
+  top: 14px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: rgba(0,0,0,0.87)
+}
+
+.component-time-slider.time-wrap .dot {
+  position: absolute;
+  width: 83px;
+  height: 32px;
+  background-color: white;
+  border: solid 1px #e0e0e0;
+  border-radius: 18px;
+  will-change: transform;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.component-time-slider.time-wrap .dot .text {
+  white-space: nowrap;
+  font-size: 14px;
+  text-transform: uppercase
+}
+
+.component-time-slider.time-wrap .dot .shift-right {
+  -webkit-transform: translateX(-8px);
+  transform: translateX(-8px)
+}
+
+.component-time-slider.time-wrap .dot .shift-left {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%)
+}
+
 /* carousel section */
 
 .carousel-section {
