@@ -342,6 +342,7 @@ a {
 }
 
 .location-calendar-container {
+  display: none;
   position: absolute;
   background-color: white;
   height: 550px;
@@ -510,6 +511,7 @@ a {
 }
 
 .calendar-v2-container {
+  display: none;
   position: relative;
   height: 100%
 }

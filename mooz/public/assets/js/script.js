@@ -4,6 +4,7 @@ window.onload = function () {
 
     'use strict';
 
+
     document.querySelector('.material-design-hamburger__icon').addEventListener(
       'click',
       function () {
@@ -25,37 +26,25 @@ window.onload = function () {
 
       });
 
-    document.querySelector(".location-calendar-tab").addEventListener('click', function () {
+    document.querySelector(".location-calendar-tab").addEventListener('click', function (e) {
       var x = document.querySelector(".location-calendar-container");
       if (x.style.display === "none") {
         x.style.display = "block";
+        document.querySelector(".location-selection").style.display = "block";
       } else {
         x.style.display = "none";
       }
     });
 
-    document.querySelector('.location-list-items').addEventListener('click', function(e) {
+    document.querySelector('.location-list-items').addEventListener('click', function (e) {
       document.querySelector('.location-calendar-tab').innerText = e.target.innerText.trim();
+      document.querySelector(".location-selection").style.display = "none";
+      document.querySelector(".calendar-v2-container").style.display = "block";
     });
-
-    document.querySelectorAll(".location-calendar-tab")[1].addEventListener('click', function () {
-      var prev = document.querySelector(".location-calendar-container");
-      prev.style.display = "none";
-      var x = document.querySelector(".calendar-v2-container");
-      console.log(document.querySelectorAll(".location-calendar-tab")[1]);
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    });
-
-    document.querySelector(".location-calendar").addEventListener('mouseleave', function () {
-      var x = document.querySelector(".location-calendar-container");
-      console.log(this);
-      x.style.display = "none";
-
-    });
-
   })();
 };
+
+function calendarSubmit() {
+  document.querySelector(".calendar-v2-container").style.display = "none";
+  document.querySelector('.location-calendar-container').style.display = 'none';
+}
