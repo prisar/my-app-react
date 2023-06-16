@@ -1206,6 +1206,15 @@ a {
     margin-top: 16px;
   }
 
+  .footer-new-logo-qr {
+    padding: 16px;
+    background: #666;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column-reverse;
+    gap: 24px;
+}
+
   .footer-new-logo-qr-logo-text {
     font-size: 40px;
     font-weight: 600;
@@ -1423,6 +1432,12 @@ a {
   .footer-new-mobile-qr {
     display: none;
   }
+
+  .footer-new-logo-qr {
+    padding: 70px 84px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
 
   .footer-new-logo-qr-qr {
     display: grid;
