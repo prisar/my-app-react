@@ -24,9 +24,9 @@ function Header() {
     <div>
       <nav className="app-header">
         <div className="brandname">prisar</div>
-        <button onClick={() => { alert('hi'); const users = logJSONData(); }} className="navbar-button" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="get users">
-          <span className="navbar-button-icon" /><div>Get Users</div>
-        </button>
+        <div onClick={() => { const users = logJSONData(); }} className="navbar-button">
+          <div>Get Users</div>
+        </div>
       </nav>
     </div>
   );
