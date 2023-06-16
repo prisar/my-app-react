@@ -3,7 +3,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import "./index.css";
 import HomePage from "../HomePage";
-import Header from "../../components/Header";
 
 
 const AppWrapper = styled.div`
@@ -18,7 +17,6 @@ export function App() {
   return (
     <AppWrapper>
       <Router>
-        {/* <Header /> */}
         <HomePage />
       </Router>
     </AppWrapper>

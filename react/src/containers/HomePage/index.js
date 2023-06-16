@@ -78,14 +78,20 @@ const BrowserBox = styled.div`
 
 export function HomePage() {
   const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const getUsers = () => {
+    setLoading(true);
     fetch("https://reqres.in/api/users?page=1").then(response => {
       return response.json()
     })
       .then(data => {
         console.log(data.data);
         setUsers(data.data);
+        setLoading(false);
+      })
+      .catch(error => {
+        // throw (error);
       })
   };
 
@@ -103,6 +109,10 @@ export function HomePage() {
         </nav>
       </div>
 
+      {loading && <div id="loading" class="loading">
+        Loading&#8230;
+      </div>}
+
       {users.length != 0 ?
         <div class="cards">
           {users.map((user, index) => {
@@ -111,7 +121,6 @@ export function HomePage() {
               <h4>{user.first_name}</h4>
               <small>{user.last_name}</small>
               <small>{user.email}</small>
-              {/* <button>Connect</button> */}
             </div>
             );
           })}
@@ -122,7 +131,7 @@ export function HomePage() {
             <Container>
               <PropositionBox>
                 <FistSentence>Assignment 1: User card grid layout </FistSentence>
-                <SecondSentence>Get users data from an api and display them.  Add a button in the navbar saying 'Get Users', which makes an API call to get the user data</SecondSentence>
+                <SecondSentence>Get users data from an api and display them. Add a button in the navbar saying 'Get Users', which makes an API call to get the user data</SecondSentence>
               </PropositionBox>
               <BrowserBox>
                 <svg width="800" height="300" viewBox="0 0 800 343" fill="none" xmlns="http://www.w3.org/2000/svg">
