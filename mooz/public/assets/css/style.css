@@ -531,25 +531,29 @@ a {
   padding: 0px 40px 10px 40px
 }
 
-.calendar-v2-container .calendar-v2-time-slider-button-time-slider-left,.calendar-v2-container .calendar-v2-time-slider-button-time-slider-right {
+.calendar-v2-container .calendar-v2-time-slider-button-time-slider-left,
+.calendar-v2-container .calendar-v2-time-slider-button-time-slider-right {
   display: grid;
   grid-template-columns: 2fr 9fr;
   align-items: center;
   gap: 10px
 }
 
-.calendar-v2-container .calendar-v2-time-slider-button-time-slider-left-title,.calendar-v2-container .calendar-v2-time-slider-button-time-slider-right-title {
+.calendar-v2-container .calendar-v2-time-slider-button-time-slider-left-title,
+.calendar-v2-container .calendar-v2-time-slider-button-time-slider-right-title {
   margin: 0
 }
 
-.calendar-v2-container .calendar-v2-time-slider-button-time-slider-left-line,.calendar-v2-container .calendar-v2-time-slider-button-time-slider-right-line {
+.calendar-v2-container .calendar-v2-time-slider-button-time-slider-left-line,
+.calendar-v2-container .calendar-v2-time-slider-button-time-slider-right-line {
   height: 5px;
   width: 100%;
   background-color: #10a310;
   position: relative
 }
 
-.calendar-v2-container .calendar-v2-time-slider-button-time-slider-left-line-button,.calendar-v2-container .calendar-v2-time-slider-button-time-slider-right-line-button {
+.calendar-v2-container .calendar-v2-time-slider-button-time-slider-left-line-button,
+.calendar-v2-container .calendar-v2-time-slider-button-time-slider-right-line-button {
   cursor: pointer;
   position: absolute;
   padding: 8px;
@@ -562,7 +566,8 @@ a {
   user-select: none
 }
 
-.calendar-v2-container .calendar-v2-time-slider-button-time-slider-left-line-white,.calendar-v2-container .calendar-v2-time-slider-button-time-slider-right-line-white {
+.calendar-v2-container .calendar-v2-time-slider-button-time-slider-left-line-white,
+.calendar-v2-container .calendar-v2-time-slider-button-time-slider-right-line-white {
   position: absolute;
   height: 5px;
   background: #f0f0f0
@@ -709,6 +714,7 @@ a {
   color: gray;
   pointer-events: none
 }
+
 .component-time-slider.time-wrap .range-wrap {
   position: relative;
   padding: 0 16px;
@@ -784,7 +790,7 @@ a {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   font-size: 10px;
-  color: rgba(0,0,0,0.87)
+  color: rgba(0, 0, 0, 0.87)
 }
 
 .component-time-slider.time-wrap .dot {
@@ -795,7 +801,7 @@ a {
   border: solid 1px #e0e0e0;
   border-radius: 18px;
   will-change: transform;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center
@@ -880,6 +886,14 @@ a {
   top: 50%;
 }
 
+.carousel-container .card.split>div {
+  height: 100%
+}
+
+.carousel-container .card:last-of-type {
+  margin-right: 0px
+}
+
 .carousel-container .oval.left i {
   -webkit-transform: translateX(-2px);
   transform: translateX(-2px);
@@ -903,6 +917,10 @@ a {
   overflow: hidden;
 }
 
+.carousel-container .carousel .inner.split {
+  display: flex
+}
+
 .carousel-container .card {
   width: -webkit-fit-content;
   width: fit-content;
@@ -912,6 +930,42 @@ a {
   border-radius: 4px;
   align-items: center;
   justify-content: center;
+}
+
+
+.home-card-container .layer .layer-bottom {
+  margin-top: 15px;
+  display: flex
+}
+
+.home-card-container .layer .layer-bottom.left {
+  justify-content: flex-start
+}
+
+.home-card-container .layer .layer-bottom.center {
+  justify-content: center
+}
+
+.home-card-container .layer .layer-bottom.right {
+  justify-content: flex-end
+}
+
+
+.home-card-container.gradient-top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 99.8%;
+  height: 98.2%;
+  display: inline-block;
+  border-radius: 16px;
+  opacity: 0.3;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to top, rgba(0,0,0,0), #000)
 }
 
 .home-card-container.vertical-card.active {
@@ -958,6 +1012,18 @@ a {
 
 .home-card-container.vertical-card .layer .layer-top .card-title-cta .card-title {
   width: 100%;
+}
+
+.home-card-container.vertical-card .layer .layer-bottom .cta-button {
+  white-space: normal;
+  text-align: center
+}
+
+.home-card-container.vertical-card img {
+  width: 100%;
+  border-radius: 12px;
+  max-width: 350px;
+  max-height: 560px
 }
 
 .home-card-container .card-title {
@@ -1410,7 +1476,7 @@ a {
     flex-direction: column;
     flex-flow: column-reverse;
     gap: 24px;
-}
+  }
 
   .footer-new-logo-qr-logo-text {
     font-size: 40px;
@@ -1474,6 +1540,42 @@ a {
 @media screen and (min-width: 500px) {
   .web-banner-image-img {
     max-height: 600px;
+  }
+
+  .carousel-container .carousel .card {
+    height: min-content;
+    width: 180px;
+  }
+
+  .carousel-container .carousel .card.horizontal {
+    height: min-content;
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel-container {
+    padding: 0px;
+  }
+
+  .carousel-container .oval {
+    display: none;
+  }
+
+  .carousel-container .carousel {
+    overflow: scroll;
+  }
+
+  .carousel-container .carousel .card {
+    margin-right: 20px;
+  }
+
+  .carousel-container .carousel .card:first-of-type {
+    margin-left: 17px;
+  }
+
+  .carousel-container .carousel .card:last-of-type {
+    margin-right: 17px;
   }
 }
 
@@ -1559,6 +1661,18 @@ a {
     color: #fff;
   }
 
+  .carousel-container .carousel .card {
+    width: 300px
+  }
+
+  .carousel-container .carousel .card.horizontal {
+    width: 500px
+  }
+
+  .carousel-container .carousel .card.split {
+    width: 500px
+  }
+
   .host-testimonials-title {
     font-size: 30px;
     margin: 30px;
@@ -1634,7 +1748,7 @@ a {
     padding: 70px 84px;
     display: grid;
     grid-template-columns: 2fr 3fr;
-}
+  }
 
   .footer-new-logo-qr-qr {
     display: grid;
