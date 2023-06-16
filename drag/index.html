@@ -1,14 +1,134 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
+<style>
+    * {
+        box-sizing: border-box;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
 
-        </style>
-        <script>
+    body {
+        height: 100%;
+        background-color: #f8f9fb;
+        color: #ffffff;
+        letter-spacing: .07em;
+    }
 
-        </script>
-    </head>
-    <body>
-        
-    </body>
+    .kanban {
+        display: flex;
+    }
+
+    .kanban-list {
+        min-width: 10em;
+        list-style: none;
+        padding: 0 0 1em 0;
+        display: inline-table;
+        border: 1px solid #ffffff;
+        margin: .625em;
+        overflow-y: visible;
+    }
+
+    .kanban-item-container {
+        padding: .5em;
+        display: block;
+        min-width: 100%;
+    }
+
+    .kanban-list-header {
+        padding: 1.5em 10em;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .kanban-list-header h4,
+    .kanban-item h5 {
+        padding: 0;
+        margin: 0;
+    }
+
+    .kanban-item {
+        padding: .5em;
+        display: block;
+        min-width: 100%;
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+        color: #000;
+    }
+    .todo-header {
+        background-color: #37A0FF;
+    }
+    .working-header {
+        background-color: #FFA22F;
+    }
+    .done-header {
+        background-color: #00BD75;
+    }
+</style>
+<script>
+    var dragged;
+    function drag(e) {
+        dragged = e.target;
+    }
+    function allowDrop(e) {
+        e.preventDefault();
+    }
+    function drop(e) {
+        e.preventDefault();
+
+        let parent;
+        if (e.currentTarget) {
+            // In Safari no path
+            parent = e.currentTarget
+        } else {
+            // In chrome path
+            parent = e.path.filter((i) => {
+                if (i.classList) {
+                    return i.classList.contains('kanban-list');
+                }
+            })[0];
+        }
+
+        parent.appendChild(dragged);
+    }
+</script>
+
+<head>
+
+</head>
+
+<body>
+    <div class="kanban">
+        <div class="kanban-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="kanban-list-header todo-header">
+                <h4>To Do</h4>
+            </div>
+            <div class="kanban-item-container" draggable="true" ondragstart="drag(event)">
+                <div class="kanban-item">
+                    <h5>Item 1</h5>
+                </div>
+            </div>
+            <div class="kanban-item-container" draggable="true" ondragstart="drag(event)">
+                <div class="kanban-item">
+                    <h5>Item 2</h5>
+                </div>
+            </div>
+            <div class="kanban-item-container" draggable="true" ondragstart="drag(event)">
+                <div class="kanban-item">
+                    <h5>Item 3</h5>
+                </div>
+            </div>
+        </div>
+        <div class="kanban-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="kanban-list-header working-header">
+                <h4>Working</h4>
+            </div>
+        </div>
+        <div class="kanban-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="kanban-list-header done-header">
+                <h4>Done</h4>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

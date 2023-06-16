@@ -1,4 +1,4 @@
-Each assigment has it's own readme.
+Each assigment has it's own readme in the sub directories below
 
 ### assignment 1
 
