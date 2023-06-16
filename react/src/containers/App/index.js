@@ -18,7 +18,7 @@ export function App() {
   return (
     <AppWrapper>
       <Router>
-        <Header />
+        {/* <Header /> */}
         <HomePage />
       </Router>
     </AppWrapper>

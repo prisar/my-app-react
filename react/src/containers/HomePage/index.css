@@ -1,9 +1,131 @@
-.pdf-view {
-    height: 720px;
-}
-
-
 ::-webkit-scrollbar {
     display: none;
+}
+
+.app-header {
+    /* width: 100%; */
+    background-color: #000;
+    color: white;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.brandname {
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 0px 16px;
+    flex: 1 1 0%;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.navbar-button {
+    background-color: white;
+    /* background-image: url(people.png); */
+    color: #000;
+    flex-shrink: 0;
+    padding: 10px 12px 10px 20px;
+    border-radius: 50px;
+    /* background-repeat: no-repeat;
+    background-position: 10% 50%; */
+    font-weight: 700;
+}
+
+.user-card {
+    padding: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    min-width: 260px;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.user-card:hover {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, .3);
+    transition: 300ms ease;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* body {
+  background-color: #F0F1F7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+} */
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 30px;
+  margin: 10px;
+  text-align: center;
+  width: 220px;
+  max-width: 100%;
+}
+
+.card img {
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 75px;
+}
+
+.card.active {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.3);
+}
+
+.card h4 {
+  margin: 10px 0;
+}
+
+.card small {
+  color: #777;
+  display: block;
+}
+
+.card button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #999;
+  padding: 10px 25px;
+  margin-top: 25px;
+}
+
+.card.active button {
+  background-color: #748DFF;
+  border: 0;
+  box-shadow: 0px 2px 5px rgba(116, 141, 255, 0.7);
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .cards {
+    flex-wrap: wrap;
   }
   
+  .card.active {
+/*    transform: scale(1); */
+  }
+}
+
+@media (min-width: 900px) {
+    .app-header {
+        display: flex;
+    }
+}

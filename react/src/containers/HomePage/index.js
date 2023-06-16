@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import "./index.css";
+import { useEffect, useState } from "react";
 
 const ContainerBox = styled.div`
   position: relative;
@@ -74,27 +75,70 @@ const BrowserBox = styled.div`
   top: 400px;
 `;
 
+
 export function HomePage() {
-    return (
-        <div style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-            <ContainerBox>
-                <Container>
-                    <PropositionBox>
-                        <FistSentence>Assignment 1: User card grid layout </FistSentence>
-                        <SecondSentence>Get users data from an api and display them.  Add a button in the navbar saying 'Get Users', which makes an API call to get the user data</SecondSentence>
-                    </PropositionBox>
-                    <BrowserBox>
-                        <svg width="800" height="300" viewBox="0 0 800 343" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.5" y="0.5" width="799" height="479" rx="3.5" fill="white" stroke="black" />
-                            <circle cx="22" cy="22" r="5.5" stroke="black" />
-                            <circle cx="46" cy="22" r="5.5" stroke="black" />
-                            <circle cx="70" cy="22" r="5.5" stroke="black" />
-                        </svg>
-                    </BrowserBox>
-                </Container>
-            </ContainerBox>
+  const [users, setUsers] = useState([]);
+
+  const getUsers = () => {
+    fetch("https://reqres.in/api/users?page=1").then(response => {
+      return response.json()
+    })
+      .then(data => {
+        console.log(data.data);
+        setUsers(data.data);
+      })
+  };
+
+  useEffect(() => {
+  }, []);
+
+  return (
+    <div style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <div>
+        <nav className="app-header">
+          <div className="brandname">prisar</div>
+          <div onClick={() => { getUsers(); }} className="navbar-button">
+            <div>Get Users</div>
+          </div>
+        </nav>
+      </div>
+
+      {users.length != 0 ?
+        <div class="cards">
+          {users.map((user, index) => {
+            return (<div key={user.id} class="card">
+              <img src={user.avatar} alt="" />
+              <h4>{user.first_name}</h4>
+              <small>{user.last_name}</small>
+              <small>{user.email}</small>
+              {/* <button>Connect</button> */}
+            </div>
+            );
+          })}
         </div>
-    );
+        :
+        <div>
+          <ContainerBox>
+            <Container>
+              <PropositionBox>
+                <FistSentence>Assignment 1: User card grid layout </FistSentence>
+                <SecondSentence>Get users data from an api and display them.  Add a button in the navbar saying 'Get Users', which makes an API call to get the user data</SecondSentence>
+              </PropositionBox>
+              <BrowserBox>
+                <svg width="800" height="300" viewBox="0 0 800 343" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="799" height="479" rx="3.5" fill="white" stroke="black" />
+                  <circle cx="22" cy="22" r="5.5" stroke="black" />
+                  <circle cx="46" cy="22" r="5.5" stroke="black" />
+                  <circle cx="70" cy="22" r="5.5" stroke="black" />
+                </svg>
+              </BrowserBox>
+            </Container>
+          </ContainerBox>
+        </div>
+      }
+
+    </div>
+  );
 }
 
 export default HomePage;
