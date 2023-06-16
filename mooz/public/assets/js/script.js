@@ -27,12 +27,15 @@ window.onload = function () {
 
     document.querySelector(".location-calendar-tab").addEventListener('click', function () {
       var x = document.querySelector(".location-calendar-container");
-      console.log(x);
       if (x.style.display === "none") {
         x.style.display = "block";
       } else {
         x.style.display = "none";
       }
+    });
+
+    document.querySelector('.location-list-items').addEventListener('click', function(e) {
+      document.querySelector('.location-calendar-tab').innerText = e.target.innerText.trim();
     });
 
     document.querySelectorAll(".location-calendar-tab")[1].addEventListener('click', function () {
